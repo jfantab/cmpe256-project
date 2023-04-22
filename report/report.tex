@@ -1,4 +1,6 @@
-\documentclass[10pt]{article}
+%% \documentclass[10pt]{article}
+%% \documentclass[10pt,technote]{IEEEtran}
+\documentclass[conference]{IEEEtran}
 
 \usepackage[skip=7pt plus1pt, indent=0pt]{parskip}
 \usepackage{hyperref}
@@ -15,25 +17,44 @@
 \date{}
 
 \author{
-Carlos Hernandez\thanks{
-Carlos Hernandez, \texttt{@carlos.hernandez@.edu},
-MS-AI, xxx-xxx-xxx},
-Hardy Leung\thanks{
-Hardy Leung, \texttt{kwok-shing.leung@sjsu.edu}, MS-AI, 016-711-877},
-and John Lu\thanks{
-John Lu, \texttt{john.lu@sjsu.edu}, MS-AI, xxx-xxx-xxx},
+\IEEEauthorblockN{Carlos Hernandez}
+\IEEEauthorblockA{
+\textit{Computer Engineering Dept.} \\
+\textit{San Jose State University} \\
+{\small \texttt{carlos.hernandez@sjsu.edu}}}
+\and 
+\IEEEauthorblockN{Hardy Leung}
+\IEEEauthorblockA{
+\textit{Computer Engineering Dept.} \\
+\textit{San Jose State University} \\
+{\small \texttt{kwok-shing.leung@sjsu.edu}}}
+\and 
+\IEEEauthorblockN{John Lu}
+\IEEEauthorblockA{
+\textit{Computer Engineering Dept.} \\
+\textit{San Jose State University} \\
+{\small \texttt{john.lu@sjsu.edu}}}
 }
 
 \maketitle
+
+\begin{abstract}
+We propose to investigate the Million Songs Dataset (MSD) \cite{bertin2011million},
+a collection of user data and metadata for popular contemporary songs. In particular, we will look at the user taste subset of datasets which consists of users, songs, and their respective play counts. The training data is approximately 500 MB (compressed) and has 1 million users, 380,000 unique songs, and 48 million user-song play count triplets. The test data has 100K users, and the validation data has 10K users. Note that users don't rate the songs; instead, we are given how many times a user played a certain song.
+\end{abstract}
+
+\begin{IEEEkeywords}
+recommender system, implicit feedback
+\end{IEEEkeywords}
 
 \section{Dataset}
 
 We propose to investigate the Million Songs Dataset (MSD) \cite{bertin2011million},
 a collection of user data and metadata for popular contemporary songs. In particular, we will look at the user taste subset of datasets which consists of users, songs, and their respective play counts. The training data is approximately 500 MB (compressed) and has 1 million users, 380,000 unique songs, and 48 million user-song play count triplets. The test data has 100K users, and the validation data has 10K users. Note that users don't rate the songs; instead, we are given how many times a user played a certain song.
 
-Link to training data: \texttt{http://millionsongdataset.com/tasteprofile/}
+% Link to training data: \texttt{http://millionsongdataset.com/tasteprofile/}
 
-Link to testing/evaluation data: \texttt{http://millionsongdataset.com/challenge/\#data1}
+% Link to testing/evaluation data: \texttt{http://millionsongdataset.com/challenge/\#data1}
 
 We will be using the truncated mAP (mean average precision) as the evaluation metric. For users in only the validation test sets, half of the songs in each player's playlist are kept hidden, and the recommendations for each user will be compared to the hidden half. 
 
@@ -43,14 +64,14 @@ We intend to use additional metadata provided as part of the Million Songs Datas
 
 \subsection{Last.fm dataset \cite{bertin2011million}}
 
-\texttt{http://millionsongdataset.com/lastfm/}
+{\small \texttt{http://millionsongdataset.com/lastfm/}}
 
 This dataset contains annotations for 943,347 tracks. An annotation may include tags (such as
 \textsc{pop}, \textsc{classic rock}, etc), as well as a list of similar songs. We will be mindful of the uneven quality of the annotation, as some songs were heavily annotated while others are clearly not.
 
 \subsection{Tagtraum Genre Labels}
 
-\texttt{https://www.tagtraum.com/msd\_genre\_datasets.html}
+{\small \texttt{https://www.tagtraum.com/msd\_genre\_datasets.html}}
 
 This dataset, curated by Henrik Schreiber \cite{schreiber2015improving}
 contains genre annotations for up to 280,831 tracks.
@@ -58,19 +79,19 @@ The annotations are of the form \textsc{rock}, \textsc{blues}, etc.
 
 \subsection{The MusiXMatch Dataset}
 
-\texttt{http://millionsongdataset.com/musixmatch/}
+{\small \texttt{http://millionsongdataset.com/musixmatch/}}
 
 This dataset contains the lyrics of 237,662 tracks in the form of stemmed bag-of-words. There are, however, a variety of factors that limit the number of tracks with lyrical information, including copyright considerations, songs without vocal tracks, etc. It is not clear whether the high degree of missing features would hamper the value of this dataset for our project, but we could assume popular songs should have the lyrical information available.
 
 \subsection{MSD Allmusic Genre Dataset (MAGD)}
 
-\texttt{http://www.ifs.tuwien.ac.at/mir/msd/}
+{\small \texttt{http://www.ifs.tuwien.ac.at/mir/msd/}}
 
 This dataset provides another single-word genre annotation for up to 422,714 tracks.
 
-\subsection{MSD acoustic and spectrogram dataset}
+\subsection{MSD Acoustic and Spectrogram Dataset}
 
-\texttt{http://www.ifs.tuwien.ac.at/mir/msd/download.html}
+{\small \texttt{http://www.ifs.tuwien.ac.at/mir/msd/}}
 
 This dataset is actually generated by the same group and in fact is the basis for the MAGD genre classification. In particular, an audio sample of each song is analyzed into a 2D power spectrum that reflects human loudness sensation \cite{lidy2005evaluation} of dimension 24 $\times$ 60 = 1440 features (24 bands and 60 modulation frequencies per band). The power spectrum is also further analyzed into 7 features per band, detailing mean, median, variance, skewness, kurtosis, min- and max-value per band. It would be up to us to experiment with this information to perform similarity analysis between songs.
 
@@ -85,7 +106,6 @@ We will consider applying the following methods, carefully curated based on our 
 We will consider both item-based and user-based methods, with adjustments to both the similarity metrics as well as how they should be used as weights, including variants such as Jaccard similarity with an exponentiated normalization that can be tuned as hyperparameters, and another non-linear weighting factor similar to the work done by Aiolli
 \cite{aiolli2013efficient}. For example, using Jaccard similarity (1 means having listen to the song at least once, and 0 means never), the weights between items i and j can be calculated as
 
-% w(i, j) = \left(\dfrac{|\texttt{common}(i, j)|}{(|\texttt{item}(i)|^\alpha * |\texttt{item}(j)|^{1-\alpha})}\right)^\gamma
 \begin{eqnarray*}
 w(i, j) = \left(\frac{|\textrm{common}(i, j)|}{(|\textrm{item}(i)|^\alpha \times |\textrm{item}(j)|^{(1-\alpha)}}\right)^\gamma
 \end{eqnarray*}

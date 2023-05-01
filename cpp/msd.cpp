@@ -2553,7 +2553,7 @@ void run_v4(const Dataset &dataset, Algo algo,
 	bool use_als_latents = algo == Algo::AlsLatents;
 	if (use_lmf_latents || use_als_latents) {
 		if (use_lmf_latents) {
-			user_latents.reset("lmf_user", "lmf_user_factors.csv");
+			user_latents.reset("lmf_user", "lmf_user_factorscsv");
 			item_latents.reset("lmf_item", "lmf_item_factors.csv");
 		} else {
 			user_latents.reset("als_user", "als_user_factors.csv");
@@ -2704,15 +2704,20 @@ void run_all_v4(const string &name, const Dataset &dataset,
 
 	// cout << evaluator.precision_string() << endl;
 
+	const bool longform = false;
 	if (Global::output_recommendations) {
 		auto t = std::time(nullptr);
 		auto tm = *std::localtime(&t);
 		ostringstream oss;
-		oss << "rec_" << put_time(&tm, "%m%d_%H%M") << "_" <<
-			algo_name << "_" << int(100 * Global::alpha) <<
-			"_" << int(100 * Global::q) <<
-			(Global::zero_one ? "_b" : "_r") << "_" <<
-			int(1000000 * mAP_valid) << ".csv";
+		if (longform) {
+			oss << "rec_" << put_time(&tm, "%m%d_%H%M") << "_" <<
+				algo_name << "_" << int(100 * Global::alpha) <<
+				"_" << int(100 * Global::q) <<
+				(Global::zero_one ? "_b" : "_r") << "_" <<
+				int(1000000 * mAP_valid) << ".csv";
+		} else {
+			oss << "rec_" << algo_name << ".csv";
+		}
     	string filename = oss.str();
 		dataset.write_recommendations(filename, recommendations);
 	}
@@ -2789,6 +2794,7 @@ int main(int argc, char **argv) {
 
 	float train_test_split = 0.0;  // default to no split;
 	string song_tracks_filename = "";
+	string song_embeddings_filename = "";
 	string output_canon_train = "";
 	string algo_name = "popularity";
 
@@ -2802,6 +2808,7 @@ int main(int argc, char **argv) {
 		songs_filename = js["songs"].get<string>();
 		test_users_filename = js["users"].get<string>();
 		song_tracks_filename = js["song_tracks"].get<string>();
+		song_embeddings_filename = js["song_embeddings"].get<string>();
 		Global::recommend_test_users = js["recommend_test_users"].get<bool>();
 		Global::alpha = js["alpha"].get<float>();
 		Global::q = js["q"].get<float>();
@@ -2863,7 +2870,7 @@ int main(int argc, char **argv) {
 	// dataset.apply_bm25_weights();  // not a good weight;
 
 	Embeddings embeddings(dataset,
-		"song_embeddings.csv",
+		song_embeddings_filename,
 		song_tracks_filename,
 		vector<string>({ "Musix_match_track_id" }));  // John;
 

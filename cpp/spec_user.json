@@ -1,0 +1,21 @@
+{
+	"max_users": 0,
+	"max_items": 0,
+	"output_canon_train": "# canon_train.csv",
+	"output_recommendations": true,
+	"train_test_split": 0.0,
+	"recommend_test_users": true,
+	"songs": "../data/kaggle_songs.txt",
+	"users": "../data/kaggle_users.txt",
+	"song_tracks": "../data/kaggle_taste_profile_song_to_tracks.txt",
+	"song_embeddings": "../data/song_embeddings.csv",
+	"visible_utilities": [ "../data/train.txt", "../data/test_visible.txt" ],
+	"hidden_utilities": [ "../data/test_hidden.txt" ],
+	"ensemble_inputs": [ "rec_item.csv", 0.17, "rec_user.csv", 0.15 ],
+	"ensemble_input_multiplier": 4.0,
+	"algorithm": "user",
+	"alpha": 0.65, 
+	"q": 4.00,
+	"zero_one": true,
+	"jaccard": false
+}

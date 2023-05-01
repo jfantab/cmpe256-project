@@ -35,7 +35,7 @@ To run the algorithms, first cd to the cpp directory, and first create the execu
 cd /path/to/cpp
 make msd
 
-You can run "item", "user", "popularity", and "ensemble". For example:
+You can run "item", "user", "popularity", "embedding", and "ensemble". For example:
 
 make item
 

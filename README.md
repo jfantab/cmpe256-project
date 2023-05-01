@@ -19,7 +19,7 @@ Link to the [Kaggle challenge](https://www.kaggle.com/competitions/msdchallenge/
 - unzip msdchallenge.zip
 - unzip taste_profile_song_to_tracks.txt.zip
 
-4. [Kaggle Challenge Dataset II](https://www.kaggle.com/competitions/msdchallenge/data)
+4. [Kaggle Challenge Dataset II](http://millionsongdataset.com/challenge/#data1) | [Data link](http://millionsongdataset.com/sites/default/files/challenge/EvalDataYear1MSDWebsite.zip)
 - Note: These zip files are already included in the repository. To reproduce our results, please cd to the million_songs_data directory, and:
 - unzip test_visible.txt.zip
 - unzip test_hidden.txt.zip

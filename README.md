@@ -7,7 +7,8 @@ Our final project was on the [Million Songs dataset](http://millionsongdataset.c
 Link to the [Kaggle challenge](https://www.kaggle.com/competitions/msdchallenge/data).
 
 1. [Taste Profile Subset](http://millionsongdataset.com/tasteprofile/) | [Train data](http://millionsongdataset.com/sites/default/files/challenge/train_triplets.txt.zip) 
-- Note: These train and test files exceed Github's max file size limit, so the links are provided here for download.
+- Note: These train and test files exceed Github's max file size limit, so the links are provided here for download.  To reproduce our results, please download and unzip the file in the
+million_songs_data directory.
 2. [MusixMatch Data](http://millionsongdataset.com/musixmatch/) | [Train split](http://millionsongdataset.com/sites/default/files/AdditionalFiles/mxm_dataset_train.txt.zip) | [Test split](http://millionsongdataset.com/sites/default/files/AdditionalFiles/mxm_dataset_test.txt.zip)
 - Note: The train and test split is arbitrary, both files can be combined to get the full coverage of lyrics for all the songs. These zip files are already included in the repository.
 3. [TagTraum Genre Annotations](http://www.tagtraum.com/msd_genre_datasets.html) | [Data link](https://www.tagtraum.com/genres/msd_tagtraum_cd1.cls.zip)

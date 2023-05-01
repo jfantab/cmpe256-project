@@ -1,7 +1,7 @@
 {
 	"max_users": 0,
 	"max_items": 0,
-	"output_canon_train": "# canon_train.csv",
+	"output_canon_train": "canon_train.csv",
 	"output_recommendations": true,
 	"train_test_split": 0.0,
 	"recommend_test_users": true,
@@ -13,7 +13,7 @@
 	"hidden_utilities": [ "../data/test_hidden.txt" ],
 	"ensemble_inputs": [ "rec_item.csv", 0.17, "rec_user.csv", 0.15 ],
 	"ensemble_input_multiplier": 4.0,
-	"algorithm": "item",
+	"algorithm": "randomized",
 	"alpha": 0.85, 
 	"q": 2.50,
 	"zero_one": true,

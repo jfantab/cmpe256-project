@@ -19,10 +19,28 @@ Link to the [Kaggle challenge](https://www.kaggle.com/competitions/msdchallenge/
 - unzip msdchallenge.zip
 - unzip taste_profile_song_to_tracks.txt.zip
 
-4. [Kaggle Challenge Dataset II](http://millionsongdataset.com/challenge/#data1) | [Data link](http://millionsongdataset.com/sites/default/files/challenge/EvalDataYear1MSDWebsite.zip)
+5. [Kaggle Challenge Dataset II](http://millionsongdataset.com/challenge/#data1) | [Data link](http://millionsongdataset.com/sites/default/files/challenge/EvalDataYear1MSDWebsite.zip)
 - Note: These zip files are already included in the repository. To reproduce our results, please cd to the million_songs_data directory, and:
 - unzip test_visible.txt.zip
 - unzip test_hidden.txt.zip
 - Note: We also need the actual utility matrices for the testset, both the visible part and the hidden part, which are test_visible.txt and test_hidden.txt respectively. The file test_visible.txt is actually identical to kaggle_visible_evaluation_triplets.txt in the Kaggle Challenge dataset, as the visible half of the song preference is needed for the competition. However, the hidden half is hidden from the competitors, and is used for our evaluation of the testset only
 
 The required libraries used in the preprocessing can be downloaded with the `pip install -r requirements.txt` command. The preprocessing notebooks are made so that the file structure and necessary files can be downloaded and reconstructed.
+
+To run the MSD code, make sure you have following the above instructions to download and unzip all the necessary files. For Lyrics embeddings flow, please
+run John's embedding generation code to generate a file called song_embeddings.csv and copy the file to the data directory first.
+
+To run the algorithms, first cd to the cpp directory, and first create the executable.
+
+cd /path/to/cpp
+make msd
+
+You can run "item", "user", "popularity", and "ensemble". For example:
+
+make item
+
+If you want to run ALS or LMF, you need to have run an extra step which is to run the Python Implicit package to generate the embeddings first. This needs to be done once.
+
+make implicit
+
+Afterwards you can run "make als" or "maks lmf".

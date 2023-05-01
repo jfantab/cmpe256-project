@@ -14654,8 +14654,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/msd_tagtraum_cd1.cls.zip"</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
-    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/genres"</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/msd_tagtraum_cd1.cls.zip"</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/genres"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14683,7 +14683,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">raw_genres</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/genres/msd_tagtraum_cd1.cls'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/genres/msd_tagtraum_cd1.cls'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
     <span class="n">raw_genres</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
     <span class="n">raw_genres</span> <span class="o">=</span> <span class="n">raw_genres</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="c1"># Ignoring commented lines</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">raw_genres</span><span class="p">)</span>
@@ -15904,7 +15904,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/genres/song_genre_one_hot_encodings.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/genres/song_genre_one_hot_encodings.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
 
 <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"track_id"</span><span class="p">]</span>
 <span class="n">columns</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">genres_list</span><span class="p">)</span>
@@ -15954,7 +15954,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/genres/song_genre_encodings.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/genres/song_genre_encodings.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
 
 <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"track_id"</span><span class="p">]</span>
 <span class="n">columns</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">genres_list</span><span class="p">)</span>

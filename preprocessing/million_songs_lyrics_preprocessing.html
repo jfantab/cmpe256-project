@@ -14589,7 +14589,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -14629,7 +14629,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -14681,9 +14681,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">dirs</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/original"</span><span class="p">,</span>
-    <span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated"</span><span class="p">,</span>
-    <span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/GloVe_embeddings"</span>
+    <span class="s2">"/content/drive/MyDrive/cmpe256-project/data/musix_match_data/original"</span><span class="p">,</span>
+    <span class="s2">"/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated"</span><span class="p">,</span>
+    <span class="s2">"/content/drive/MyDrive/cmpe256-project/data/GloVe_embeddings"</span>
 <span class="p">]</span>
 
 <span class="k">for</span> <span class="n">dir_path</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
@@ -14706,12 +14706,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">PATH</span> <span class="o">=</span> <span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/zipped/"</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">PATH</span> <span class="o">=</span> <span class="s2">"/content/drive/MyDrive/cmpe256-project/data/musix_match_data/zipped/"</span>
 <span class="n">zip_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">PATH</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">zip_files</span><span class="p">:</span>
     <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">PATH</span> <span class="o">+</span> <span class="n">file</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
-        <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/original"</span><span class="p">)</span>
+        <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/musix_match_data/original"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14729,7 +14729,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1">## File too big to load into memory</span>
 <span class="c1"># r = requests.get("https://nlp.stanford.edu/data/glove.42B.300d.zip", stream=True)</span>
-<span class="c1"># with open("/content/drive/MyDrive/cmpe256-project/million_songs_data/glove.42B.300d.zip", "wb") as fp:</span>
+<span class="c1"># with open("/content/drive/MyDrive/cmpe256-project/data/glove.42B.300d.zip", "wb") as fp:</span>
 <span class="c1">#     for chunk in r.iter_content(chunk_size=512):</span>
 <span class="c1">#         fp.write(chunk)</span>
 </pre></div>
@@ -14747,8 +14747,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/glove.6B.zip"</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
-    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/GloVe_embeddings"</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/glove.6B.zip"</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/GloVe_embeddings"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14764,8 +14764,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># with zipfile.ZipFile("/content/drive/MyDrive/cmpe256-project/million_songs_data/glove.42B.300d.zip", 'r') as zip_ref:</span>
-<span class="c1">#     zip_ref.extractall("/content/drive/MyDrive/cmpe256-project/million_songs_data/GloVe_embeddings")</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># with zipfile.ZipFile("/content/drive/MyDrive/cmpe256-project/data/glove.42B.300d.zip", 'r') as zip_ref:</span>
+<span class="c1">#     zip_ref.extractall("/content/drive/MyDrive/cmpe256-project/data/GloVe_embeddings")</span>
 </pre></div>
 
      </div>
@@ -14827,11 +14827,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-python"><pre><span></span><span class="n">raw_lyrics</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="n">train_lyrics</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/original/mxm_dataset_train.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/original/mxm_dataset_train.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
     <span class="n">train_lyrics</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 
 <span class="n">test_lyrics</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/original/mxm_dataset_test.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/original/mxm_dataset_test.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
     <span class="n">test_lyrics</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 
 <span class="n">raw_lyrics</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">train_lyrics</span><span class="p">)</span>
@@ -14902,7 +14902,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <span class="c1"># Temporary array holding tuples of both id's for each song</span>
     <span class="n">ids</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="c1">## Old approach — Data structure storing term frequencies for each song using ordering of 5000 top words</span>
+    <span class="c1">## Old approach — data structure storing term frequencies for each song using ordering of 5000 top words</span>
     <span class="c1"># lyrics = [[0 for _ in range(len(top_words))] for _ in range(num_songs)]</span>
 
     <span class="c1"># Extracting track id's, word id's, and their respective word counts</span>
@@ -15171,7 +15171,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">song_ids</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/song_ids.csv'</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">song_ids</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/song_ids.csv'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15187,7 +15187,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># with open('/content/drive/MyDrive/million_songs_data/lyric_term_frequencies.txt', 'w') as fp:</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># with open('/content/drive/MyDrive/data/lyric_term_frequencies.txt', 'w') as fp:</span>
 <span class="c1">#     for song in lyrics:</span>
 <span class="c1">#         song = [str(x) for x in song]</span>
 <span class="c1">#         fp.write(', '.join(song) + "\n")</span>
@@ -15206,7 +15206,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/top_words.txt'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<div class=" highlight hl-python"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/top_words.txt'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
     <span class="n">top_words</span> <span class="o">=</span> <span class="n">raw_lyrics</span><span class="p">[</span><span class="mi">17</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span>
     <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">top_words</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
@@ -15332,7 +15332,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Saving sparse matrix to a file</span>
-<span class="n">save_npz</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/lyrics_csr_tfidf.npz'</span><span class="p">,</span> <span class="n">tfidf_csr_lyrics_sparse</span><span class="p">)</span>
+<span class="n">save_npz</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/lyrics_csr_tfidf.npz'</span><span class="p">,</span> <span class="n">tfidf_csr_lyrics_sparse</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15349,7 +15349,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1">## Checking that the sparse matrix can be loaded correctly</span>
-<span class="c1"># s = load_npz('/content/drive/MyDrive/cmpe256-project/million_songs_data/generated/lyrics_csr_tfidf.npz')</span>
+<span class="c1"># s = load_npz('/content/drive/MyDrive/cmpe256-project/data/generated/lyrics_csr_tfidf.npz')</span>
 <span class="c1"># s</span>
 </pre></div>
 
@@ -15378,7 +15378,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># raw_lyrics_tf = []</span>
-<span class="c1"># with open('/content/drive/MyDrive/cmpe256-project/million_songs_data/generated/lyric_term_frequencies.txt', 'r') as fp:</span>
+<span class="c1"># with open('/content/drive/MyDrive/cmpe256-project/data/generated/lyric_term_frequencies.txt', 'r') as fp:</span>
 <span class="c1">#     raw_lyrics_tf = fp.readlines()</span>
 </pre></div>
 
@@ -15424,12 +15424,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Creating dictionary of words stemmed by Porter Stemmer to map to their unstemmed forms</span>
 <span class="n">stem_mappings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/original/stem_mappings.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/original/stem_mappings.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
     <span class="n">raw_mappings</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">raw_mappings</span><span class="p">:</span>
@@ -15448,7 +15448,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">stem_mappings</span>
@@ -15469,7 +15469,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16500,13 +16500,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Loading pre-trained GloVe embeddings</span>
 <span class="n">glove_embeddings</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">embeddings_filename</span> <span class="o">=</span> <span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/GloVe_embeddings/glove.6B.50d.txt'</span>
-<span class="c1"># embeddings_filename = '/content/drive/MyDrive/cmpe256-project/million_songs_data/GloVe_embeddings/glove.42B.300d.txt'</span>
+<span class="n">embeddings_filename</span> <span class="o">=</span> <span class="s1">'/content/drive/MyDrive/cmpe256-project/data/GloVe_embeddings/glove.6B.50d.txt'</span>
+<span class="c1"># embeddings_filename = '/content/drive/MyDrive/cmpe256-project/data/GloVe_embeddings/glove.42B.300d.txt'</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">embeddings_filename</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
     <span class="n">glove_embeddings</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
     <span class="n">glove_embeddings</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">glove_embeddings</span><span class="p">]</span>
@@ -16522,7 +16522,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">glove_embeddings</span><span class="p">)</span>
@@ -16543,7 +16543,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16563,7 +16563,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Putting the embeddings into a dictionary</span>
@@ -16586,7 +16586,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">embeddings</span>
@@ -16607,7 +16607,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -26136,7 +26136,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">csr_lyrics</span> <span class="o">=</span> <span class="n">load_npz</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/lyrics_csr_tfidf.npz'</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">csr_lyrics</span> <span class="o">=</span> <span class="n">load_npz</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/lyrics_csr_tfidf.npz'</span><span class="p">)</span>
 <span class="n">csr_lyrics</span>
 </pre></div>
 
@@ -26222,7 +26222,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="n">save_npz</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/lyrics_coo.npz'</span><span class="p">,</span> <span class="n">coo_lyrics</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">save_npz</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/lyrics_coo.npz'</span><span class="p">,</span> <span class="n">coo_lyrics</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -26238,7 +26238,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># coo_lyrics = load_npz('/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/lyrics_coo.npz')</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># coo_lyrics = load_npz('/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/lyrics_coo.npz')</span>
 </pre></div>
 
      </div>
@@ -26251,11 +26251,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">top_words</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/top_words.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/top_words.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
     <span class="n">top_words</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
     <span class="n">top_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">top_words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span>
 </pre></div>
@@ -26270,7 +26270,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">top_words</span>
@@ -26291,7 +26291,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -27452,7 +27452,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Storing each song's pair of ID's into dataframe</span>
-<span class="n">ids_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/song_ids.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ids_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/song_ids.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">ids_df</span>
 </pre></div>
 
@@ -27701,7 +27701,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Creating final song embeddings by averaging all embeddings for a song and weighting each word embedding with their TF-IDF values</span>
 <span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/song_embeddings.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/song_embeddings.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
 
 <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">emb_columns</span><span class="p">)</span>
 <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
@@ -27762,8 +27762,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Compressing csv file of resulting embeddings</span>
-<span class="n">zout</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/song_embeddings.csv.zip"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span>
-<span class="n">zout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/million_songs_data/musix_match_data/generated/song_embeddings.csv"</span><span class="p">)</span>
+<span class="n">zout</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/song_embeddings.csv.zip"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span>
+<span class="n">zout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"/content/drive/MyDrive/cmpe256-project/data/musix_match_data/generated/song_embeddings.csv"</span><span class="p">)</span>
 <span class="n">zout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
